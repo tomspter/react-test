@@ -9,7 +9,7 @@ COPY package.json ./
 COPY package-lock.json ./
 
 # 安装依赖
-RUN npm install
+RUN npm config set registry https://registry.npmmirror.com&&npm install
 
 # 复制项目的所有文件到容器
 COPY . .
