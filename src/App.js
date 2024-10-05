@@ -8,7 +8,7 @@ function App() {
   // 使用 useEffect 来调用 API
   useEffect(() => {
     // 发送一个 GET 请求到 API
-    fetch('http://127.0.0.1:8080/ping')
+    fetch('/api/ping')
         .then(response => response.json())  // 解析JSON响应
         .then(json => {
           setData(json);  // 将数据保存到 state 中
