@@ -17,5 +17,3 @@ services:
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf  # 挂载自定义的 Nginx 配置
       - ./react-test/build:/usr/share/nginx/html  # 将 React 构建后的静态文件挂载到 Nginx
-    depends_on:
-      - frontend
