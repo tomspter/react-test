@@ -5,6 +5,5 @@ services:
       dockerfile: Dockerfile
     ports:
       - "80:80"
-networks:
-  gin-test:
-    driver: bridge
+    networks:
+      - gin-test
