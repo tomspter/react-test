@@ -5,7 +5,6 @@ function App() {
   const [data, setData] = useState([]);  // 用来存储API返回的数据
   const [loading, setLoading] = useState(true); // 用来控制加载状态
 
-  // 使用 useEffect 来调用 API
   useEffect(() => {
     fetch('/api/ping')
         .then(response => response.json())  // 解析JSON响应
