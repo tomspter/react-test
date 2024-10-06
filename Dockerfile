@@ -16,3 +16,12 @@ COPY . .
 
 # 构建 React 应用
 RUN npm run build
+
+FROM nginx:alpine
+COPY --from=0 /app/build /usr/share/nginx/html
+COPY /nginx/nginx.conf /etc/nginx/conf.d/default.conf
+# 暴露端口
+EXPOSE 80
+
+# 启动 Nginx
+CMD ["nginx", "-g", "daemon off;"]
