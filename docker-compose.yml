@@ -5,8 +5,6 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./build:/usr/share/nginx/html  # 将构建文件夹挂载到 Nginx
-    depends_on:
-      - nginx
 
   nginx:
     image: nginx:latest
@@ -15,3 +13,5 @@ services:
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
       - ./build:/usr/share/nginx/html  # Nginx 服务器提供的静态资源
+    depends_on:
+      - frontend
