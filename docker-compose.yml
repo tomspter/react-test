@@ -5,8 +5,8 @@ services:
     ports:
       - "80:80"
     networks:
-      - gin-learn_project-bridge
+      - project-bridge
 
 networks:
-  gin-learn_project-bridge:
+  project-bridge:
     external: true
