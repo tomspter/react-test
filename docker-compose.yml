@@ -2,8 +2,7 @@ services:
   frontend:
     build:
       context: .
-      dockerfile: Dockerfile
     ports:
       - "80:80"
     networks:
-      - gin-learn_gin-test
+      - project-bridge
